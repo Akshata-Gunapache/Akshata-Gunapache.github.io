@@ -322,6 +322,10 @@ body.light-theme {
 
 .nav-items a {
   padding: 10px;
+  color: #a395e9;
+}
+.nav-items a:hover{
+  color: #A45CB9;
 }
 
 /* Active link */
