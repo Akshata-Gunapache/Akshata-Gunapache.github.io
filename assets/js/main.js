@@ -29,6 +29,25 @@ modalClose.forEach((mc) =>{
         })
     })
 })
+
+/*=============== ACCORDIAN SKILLS ===============*/
+const skillsContent = document.getElementsByClassName('skills__content'),
+skillsHeader = document.querySelectorAll('.skills__header')
+
+function toggleSkills(){
+    let itemClass = this.parentNode.ClassName
+
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
+    }
+    if (itemClass === 'skills__content skills__close'){
+        this.parentNode.className = 'skills__content skills__open'
+    }
+}
+
+skillsHeader.forEach((el) => {
+    el.addEventListener('click',toggleSkills)
+})
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
 
@@ -68,8 +87,8 @@ const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
 // We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-sun' : 'bx bx-moon'
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
