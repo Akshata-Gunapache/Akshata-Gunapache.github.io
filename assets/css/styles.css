@@ -1011,6 +1011,7 @@ body.light-theme {
   .about__description{
     margin-top: 20px;
     padding: 0px;
+    padding-bottom: 20px;
   }
   .skills_title {
     font-size: var(--normal-font-size);
@@ -1040,6 +1041,23 @@ body.light-theme {
     justify-content: center;
   }
 
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 567px){
+  .about__container{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    font-size: var(--small-font-size);
+  } 
+  .about__img{
+    width: 200px;
+  } 
+  .about__description{
+    margin-top: 20px;
+    padding: 0px;
+    padding-bottom: 20px;
+  }
 }
 
 /* For medium devices */
