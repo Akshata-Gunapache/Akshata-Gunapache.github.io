@@ -31,23 +31,35 @@ modalClose.forEach((mc) =>{
 })
 
 /*=============== ACCORDIAN SKILLS ===============*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-skillsHeader = document.querySelectorAll('.skills__header')
+// const skillsContent = document.getElementsByClassName('skills__content'),
+// skillsHeader = document.querySelectorAll('.skills__header')
 
-function toggleSkills(){
-    let itemClass = this.parentNode.ClassName
+// function toggleSkills(){
+//     let itemClass = this.parentNode.ClassName
 
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
-    }
-    if (itemClass === 'skills__content skills__close'){
-        this.parentNode.className = 'skills__content skills__open'
-    }
-}
+//     for(i = 0; i < skillsContent.length; i++){
+//         skillsContent[i].className = 'skills__content skills__close'
+//     }
+//     if (itemClass === 'skills__content skills__close'){
+//         this.parentNode.className = 'skills__content skills__open'
+//     }
+// }
 
-skillsHeader.forEach((el) => {
-    el.addEventListener('click',toggleSkills)
-})
+// skillsHeader.forEach((el) => {
+//     el.addEventListener('click',toggleSkills)
+// })
+
+// SKILLS
+const skillContent = document.querySelectorAll(".skill");
+const skillHeader = document.querySelectorAll(".skills_header");
+const skillContentArr = Array.from(skillContent);
+const skillHeaderArr = Array.from(skillHeader);
+
+skillHeaderArr.forEach((element, idx) => {
+  element.addEventListener("click", function () {
+    skillContentArr[idx].classList.toggle("skills_open");
+  });
+});
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
 
