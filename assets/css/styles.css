@@ -220,6 +220,10 @@ body.light-theme {
   padding: 0 2.5rem;
 }
 
+.portfolio_data{
+  text-align: center;
+}
+
 .portfolio_img {
   width: 356px;
   border-radius: 0.5rem;
