@@ -328,6 +328,7 @@ body.light-theme {
 }
 
 .nav {
+  max-width: 968px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -1323,6 +1324,9 @@ body.light-theme {
 
   .nav-items {
     display: inline-block;
+    margin-right: -20px;
+    padding: 0rem;
+    font-size: 13px;
   }
   .nav-bar a {
     padding-right: 4px;
@@ -1428,6 +1432,14 @@ body.light-theme {
   .footer_container {
     padding: 0;
   }
+
+  .nav-items {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 0rem;
+    font-size: 15px;
+  }
+
   .home_blob {
     width: 320px;
   }
