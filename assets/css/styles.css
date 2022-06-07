@@ -1078,8 +1078,15 @@ body.dark-theme {
   padding: 0.25rem;
   border-radius: 0.25rem;
   font-size: 1rem;
-  display: inline-flex;
+  display: inline-flex; 
+  transition: 0.4s;
 }
+
+.footer__social-link:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
 
 .footer__social-link:hover{
   background-color: var(--first-color);
