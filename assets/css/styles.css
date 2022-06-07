@@ -139,7 +139,7 @@ img {
 }
 
 /*========== Variables Light theme ==========*/
-body.light-theme {
+body.dark-theme {
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 8%, 35%);
   --body-color: hsl(var(--second-hue), 100%, 99%);
@@ -149,33 +149,33 @@ body.light-theme {
     Color changes in some parts of 
     the website, in light theme
 ==========*/
-.light-theme .scroll-header {
+.dark-theme .scroll-header {
   box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
 }
-.light-theme .nav__menu {
+.dark-theme .nav__menu {
   background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
 }
-.light-theme .section__subtitle {
+.dark-theme .section__subtitle {
   color: var(--text-color);
 }
-.light-theme .home__social-link {
+.dark-theme .home__social-link {
   box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
 }
-.light-theme .home__social::after,
-.light-theme .footer__social-link {
+.dark-theme .home__social::after,
+.dark-theme .footer__social-link {
   color: var(--title-color);
 }
-.light-theme .home__social-link,
-.light-theme .home__scroll,
-.light-theme .button,
-.light-theme .button:hover,
-.light-theme .footer__title,
-.light-theme .footer__link,
-.light-theme .footer__copy {
+.dark-theme .home__social-link,
+.dark-theme .home__scroll,
+.dark-theme .button,
+.dark-theme .button:hover,
+.dark-theme .footer__title,
+.dark-theme .footer__link,
+.dark-theme .footer__copy {
   color: var(--title-color);
 }
 
-.light-theme .home__name {
+.dark-theme .home__name {
   color: #a395e9;
   background: url(https://png.pngtree.com/background/20210709/original/pngtree-fashion-simple-purple-powder-picture-image_927254.jpg);
   background-size: 40%;
@@ -194,20 +194,20 @@ body.light-theme {
   }
 }
 
-.light-theme .home__name:hover span {
+.dark-theme .home__name:hover span {
   color: var(--body-color);
   text-shadow: 0 0 10px #a395e9, 0 0 40px #a395e9, 0 0 80px #a395e9,
     0 0 120px #a395e9, 0 0 160px #a395e9;
 }
 
-.light-theme .skills__content,
-.light-theme .tools__content,
-.light-theme .experience__card,
-.light-theme .contact__card {
+.dark-theme .skills__content,
+.dark-theme .tools__content,
+.dark-theme .experience__card,
+.dark-theme .contact__card {
   box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
 }
 
-.light-theme .work__button{
+.dark-theme .work__button{
   color: var(--first-color);
 }
 
@@ -601,7 +601,7 @@ body.light-theme {
 .skills_icon,
 .skills_arrow {
   font-size: 2rem;
-  font-weight: bolder;
+  font-weight: 2px;
   color: var(--first-color);
 }
 
@@ -669,28 +669,13 @@ body.light-theme {
   margin-top: 20px;
 }
 
-.skills_python {
-  width: 95%;
-}
-
-.skills_html {
-  width: 95%;
-}
-
-.skills_css {
-  width: 90%;
-}
-
-.skills_js {
-  width: 75%;
-}
-
-.skills_ux {
-  width: 95%;
-}
-
+.skills_python,
+.skills_html,
+.skills_css,
+.skills_js,
+.skills_ux,
 .skills_c {
-  width: 50%;
+  width: 95%;
 }
 
 .skills_git,
