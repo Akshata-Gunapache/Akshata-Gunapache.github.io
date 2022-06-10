@@ -7,7 +7,9 @@
 </h2>
 
 <div align="center">
-  <img alt="Mockup" src="assets/img/readme-pic.png" >
+  <img alt="Mockup" src="assets/img/readme-pic.png" width="600px">
+</div>
+
 </div>
 
 ## Features 📋
