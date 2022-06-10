@@ -14,10 +14,10 @@
 
 ## Features 📋
 
-⚡️Responsive Portfolio Website Using HTML CSS & JavaScript
-⚡️Smooth scrolling in each section.
-⚡️Includes a dark and light mode.
-⚡️Developed first with the Mobile First methodology, then for desktop.
+⚡️Responsive Portfolio Website Using HTML CSS & JavaScript<br>
+⚡️Smooth scrolling in each section.<br>
+⚡️Includes a dark and light mode.<br>
+⚡️Developed first with the Mobile First methodology, then for desktop.<br>
 ⚡️Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 
@@ -52,4 +52,17 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Added some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+<hr>
+
+<p align="center">
+Show some 💖 by starring ⭐ this repo!
+</p>
+<p align="center">
+<img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="Profile views" />
+</p>
+
+
+
+
 
