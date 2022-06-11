@@ -1303,8 +1303,8 @@ body.dark-theme {
   }
 
   .about__container,
-  .contact_container,
-  .footer_container,
+  .contact__container,
+  .footer__container,
   .portfolio_content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1438,6 +1438,10 @@ body.dark-theme {
     align-items: center;
   }
 
+  .contact__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer_container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1510,6 +1514,10 @@ body.dark-theme {
 
   .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: -4.5rem;
+  }
+
+  .contact__container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact_form {
