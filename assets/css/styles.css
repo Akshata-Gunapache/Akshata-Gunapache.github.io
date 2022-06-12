@@ -124,6 +124,12 @@ button {
   outline: none;
 }
 
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -149,7 +155,7 @@ body.dark-theme {
 }
 /*========== 
     Color changes in some parts of 
-    the website, in light theme
+    the website, in dark theme
 ==========*/
 .dark-theme .scroll-header {
   box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
@@ -555,6 +561,13 @@ body.dark-theme {
   background-color: transparent;
   border: 2px solid var(--first-color);
   color: var(--first-color);
+}
+
+.button_icon{
+  font-size: 1.5rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+  vertical-align: middle;
 }
 /*=============== ABOUT ===============*/
 .about__container {
@@ -1062,6 +1075,16 @@ body.dark-theme {
 
 .contact__form-area textarea {
   resize: none;
+}
+
+.alert_style {
+  text-align: center;
+  padding: 10px;
+  font-size: var(--small-font-size);
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  display: none;
 }
 
 /*=============== FOOTER ===============*/

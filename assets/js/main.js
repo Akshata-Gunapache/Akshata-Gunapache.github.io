@@ -132,5 +132,42 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`,{delay: 700})
-sr.reveal(`.home__social , .home__scroll`,{delay: 900 , origin:'bottom'})
+sr.reveal(`.about`,{delay: 100,origin:'bottom'})
+sr.reveal(`.home__handle`,{delay: 300})
+sr.reveal(`.home__social , .home__scroll`,{delay: 500 , origin:'bottom'})
+
+/*=============== CONTACT FORM ===============*/
+const form = document.getElementById("contact__form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("alert");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      status.innerHTML = "Your message has been sent.";
+      document.querySelector(".alert_style").style.display = "block";
+
+      // hide alert after 3 seconds
+      setTimeout(function () {
+        document.querySelector(".alert_style").style.display = "none";
+      }, 4000);
+      form.reset();
+    })
+    .catch((error) => {
+      status.innerHTML = "Oops! There was a problem delivering your message, please contact via other means.";
+      document.querySelector(".alert_style").style.display = "block";
+
+      // hide alert after 3 seconds
+      setTimeout(function () {
+        document.querySelector(".alert_style").style.display = "none";
+      }, 4000);
+    });
+}
+form.addEventListener("submit", handleSubmit);
