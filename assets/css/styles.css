@@ -767,7 +767,7 @@ body.dark-theme {
 /*=============== EXPERIENCE ===============*/
 
 .experience__container {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding-top: 1rem;
 }
@@ -1518,6 +1518,7 @@ body.dark-theme {
 
   .contact__container{
     grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
   }
 
   .contact_form {
