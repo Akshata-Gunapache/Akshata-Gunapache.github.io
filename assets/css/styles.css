@@ -9,22 +9,24 @@
   /*
         Purple: hsl(250, 66%, 75%)
         Blue: hsl(207, 90%, 72%)
-        Pink: hsl(356, 66%, 75%)
+        Pink: hsl(355, 96, 90)
         Teal: hsl(174, 63%, 62%)
+        Turquoise: hsl(173, 81, 83)
   */
-  --first-hue: 250;
-  --sat: 66%;
-  --lig: 75%;
+
+  --first-hue: 355;
+  --sat: 96%;
+  --lig: 90%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 86%); /*-4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
   --body-color: hsl(var(--second-hue), 48%, 8%);
   --container-color: hsl(var(--second-hue), 32%, 12%);
   --scroll-bar-color: #1e1e1f;
-  --scroll-thumb-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --scroll-thumb-color: hsl(var(--first-hue), var(--sat), var(--lig)); 
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -147,13 +149,24 @@ img {
 .change-theme:hover {
   color: var(--first-color);
 }
-
+.typeing1{
+  display: none;
+}
 /*========== Variables Light theme ==========*/
 body.dark-theme {
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /*-4% */
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 8%, 35%);
   --body-color: hsl(var(--second-hue), 100%, 99%);
   --container-color: #fff;
+  --scroll-bar-color: #1e1e1f;
+  --scroll-thumb-color: hsl(var(--first-hue), var(--sat), var(--lig)); 
 }
 /*========== 
     Color changes in some parts of 
@@ -167,6 +180,12 @@ body.dark-theme {
 }
 .dark-theme .section__subtitle {
   color: var(--text-color);
+}
+.dark-theme .typeing2{
+  display: none;
+}
+.dark-theme .typeing1{
+  display: inline-block;
 }
 .dark-theme .home__social-link {
   box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
@@ -419,11 +438,11 @@ body.dark-theme {
 .nav-items a {
   padding: 10px;
   margin: 0px 1px;
-  color: #a395e9;
+  color: var(--first-color);
 }
 
 .nav-items a:hover {
-  color: #a45cb9;
+  color: var(--first-color-alt);
 }
 
 
