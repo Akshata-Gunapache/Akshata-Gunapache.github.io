@@ -1168,6 +1168,14 @@ body.dark-theme {
   text-align: center;
   font-size: var(--smaller-font-size);
 }
+
+.footer_tagline{
+  text-align: center;
+  font-size: var(--normal-font-size);
+  margin-top: 2.5rem;
+  color: black;
+  font-weight: bolder;
+}
 /*=============== SCROLL BAR ===============*/
 
 ::-webkit-scrollbar {
