@@ -1109,6 +1109,9 @@ body.dark-theme {
 }
 
 /*=============== CONTACT ===============*/
+#contact{
+  padding-top: 2rem;
+}
 .contact__container {
   row-gap: 3rem;
   padding-bottom: 3rem;
