@@ -398,10 +398,6 @@ body.dark-theme {
   font-size: 20px;
 }
 
-.fa-graduation-cap{
-  font-size: 18px;
-}
-
 .nav__list {
   display: flex;
   justify-content: space-between;
