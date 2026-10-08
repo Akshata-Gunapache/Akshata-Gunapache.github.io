@@ -266,6 +266,30 @@ footer a:hover{color:var(--accent)}
 /* reveal */
 
 
+
+/* card-wide links + extra repo links */
+.stretch:after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+.project .go,.project .viz{position:relative}
+.repo-links{display:flex;gap:8px;margin-top:14px;position:relative;z-index:2}
+.repo-links a{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--solid);transition:.2s}
+.repo-links a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.project:focus-within{outline:2px solid var(--accent);outline-offset:3px}
+.more-head{margin:44px 0 16px}
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.more-card{position:relative;display:flex;flex-direction:column;padding:24px;transition:transform .3s,box-shadow .3s}
+.more-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.more-card .ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--soft);color:var(--accent);margin-bottom:16px;transition:transform .5s cubic-bezier(.34,1.56,.64,1),background .3s,color .3s}
+.more-card .ic svg{width:21px;height:21px}
+.more-card:hover .ic{transform:rotate(-10deg) scale(1.12);background:var(--accent);color:#fff}
+.more-card h3{font-size:17px;font-weight:600;margin:0 0 8px}
+.more-card p{color:var(--muted);font-size:14.5px;margin:0 0 14px}
+.more-card .tags{margin-top:auto}
+.more-card .tag{font-size:12px;padding:4px 10px}
+.more-card .go{position:absolute;top:22px;right:22px}
+.more-card:hover .go{background:var(--accent);border-color:var(--accent);color:#fff;transform:rotate(45deg)}
+@media (max-width:980px){.more{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.more{grid-template-columns:1fr}}
+
 /* ================= motion layer ================= */
 /* scroll progress */
 .progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:0 50%;transform:scaleX(0);
@@ -514,7 +538,7 @@ footer a:hover{color:var(--accent)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="projects">
-        <a class="glass project reveal" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener">
+        <article class="glass project reveal">
           <div class="viz" aria-hidden="true">
             <span class="badge">Full-stack · AI</span>
             <div class="kan">
@@ -522,24 +546,29 @@ footer a:hover{color:var(--accent)}
               <div class="col"><b>Doing</b><i class="hot"></i><i></i></div>
               <div class="col"><b>Done</b><i></i><i class="s"></i><i></i></div>
             </div>
-            <div class="mini ai">✦ AI: move "API auth" → Doing</div>
+            <div class="mini ai">✦ AI: priority → High</div>
           </div>
-          <div class="info"><div><h3>Jira++</h3><small>AI-powered workflow platform</small></div><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <div class="desc">Real-time multi-user kanban with WebSocket (STOMP) sync, JWT, RBAC and AI task recommendations. GCP CI/CD made deployments 60% faster.
-            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">WebSockets</span><span class="tag">GCP</span></div></div>
-        </a>
-        <a class="glass project reveal" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener">
+          <div class="info"><div><h3><a class="stretch" href="https://github.com/Akshata-Gunapache/AI-JiraPlusPlus" target="_blank" rel="noopener">AI Jira++</a></h3><small>AI-driven workflow platform</small></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          <div class="desc">A Jira-style kanban with drag-and-drop workflows, JWT and Spring Security, STOMP WebSocket collaboration, and a FastAPI microservice for AI task prioritisation. Deployed on GCP App Engine with GitHub Actions CI/CD.
+            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">FastAPI</span><span class="tag">WebSockets</span><span class="tag">GCP</span></div>
+            <div class="repo-links">
+              <a href="https://github.com/Akshata-Gunapache/AI-JiraPlusPlus" target="_blank" rel="noopener">Backend ↗</a>
+              <a href="https://github.com/Akshata-Gunapache/AI-JiraPlusPlus-Frontend" target="_blank" rel="noopener">Frontend ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="glass project reveal">
           <div class="viz" aria-hidden="true">
             <span class="badge">Cloud</span>
-            <div class="kpis"><div class="mini"><small>uptime</small>99.9%</div><div class="mini"><small>p95</small>182ms</div></div>
+            <div class="kpis"><div class="mini"><small>cpu</small>42%</div><div class="mini"><small>memory</small>61%</div></div>
             <div class="mini"><svg class="chart" viewBox="0 0 300 80" preserveAspectRatio="none"><polyline points="0,62 30,54 60,58 90,40 120,46 150,28 180,34 210,20 240,26 270,12 300,16"/></svg></div>
-            <div class="mini health"><span><i></i>api</span><span><i></i>db</span><span><i class="w"></i>queue</span><span><i></i>auth</span></div>
+            <div class="mini health"><span><i></i>api</span><span><i></i>db</span><span><i class="w"></i>alerts</span><span><i></i>network</span></div>
           </div>
-          <div class="info"><div><h3>CloudOps Dashboard</h3><small>Infrastructure monitoring</small></div><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <div class="desc">Cloud-native dashboard with real-time telemetry and service-health metrics, with a React/TypeScript front end and a FastAPI back end in Docker.
-            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div></div>
-        </a>
-        <a class="glass project reveal" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener">
+          <div class="info"><div><h3><a class="stretch" href="https://github.com/Akshata-Gunapache/cloudops-monitoring-dashboard" target="_blank" rel="noopener">CloudOps Dashboard</a></h3><small>Infrastructure monitoring</small></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          <div class="desc">Real-time CPU, memory, disk and network telemetry, service health and alert management in interactive charts. React and TypeScript on a FastAPI and PostgreSQL backend, all in Docker Compose.
+            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div></div>
+        </article>
+        <article class="glass project reveal">
           <div class="viz" aria-hidden="true">
             <span class="badge">AI / NLP</span>
             <div class="mini rv"><span>"Delivery was super quick!"</span><em class="pos">+0.92</em></div>
@@ -547,11 +576,38 @@ footer a:hover{color:var(--accent)}
             <div class="mini rv"><span>"Support never replied"</span><em class="neg">−0.81</em></div>
             <div class="mini"><div class="bars"><i style="--h:78%"></i><i style="--h:22%"></i><i style="--h:12%"></i></div></div>
           </div>
-          <div class="info"><div><h3>Review Intelligence</h3><small>LLM-powered sentiment</small></div><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          <div class="info"><div><h3><a class="stretch" href="https://github.com/Akshata-Gunapache/Sentiment_Analysis" target="_blank" rel="noopener">Review Intelligence</a></h3><small>LLM-powered sentiment</small></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
           <div class="desc">Sentiment pipeline over 10,000+ customer reviews using VADER and RoBERTa, with transformer-based insights and automated visualisation.
             <div class="tags"><span class="tag">Python</span><span class="tag">RoBERTa</span><span class="tag">PyTorch</span><span class="tag">Pandas</span></div></div>
+        </article>
+      </div>
+
+      <div class="more-head reveal"><div class="kicker" style="margin:0">More projects</div></div>
+      <div class="more">
+        <a class="glass more-card reveal" href="https://github.com/Akshata-Gunapache/Cryptocurrency-Tracker" target="_blank" rel="noopener">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+          <h3>Cryptocurrency Tracker</h3>
+          <p>A MERN app that tracks the top 100 coins by market cap, with live price charts in every timeframe and a signed-in portfolio tracker.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Chart.js</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <a class="glass more-card reveal" href="https://github.com/Akshata-Gunapache/Real-Time-Video-Streaming-Using-Socket-Programming" target="_blank" rel="noopener">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-4v12l-6-4"/></svg></div>
+          <h3>Real-Time Video Streaming</h3>
+          <p>A client–server app built on Python sockets. Clients stream live camera video to a central server, which relays it to other users in real time.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Sockets</span><span class="tag">Networking</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <a class="glass more-card reveal" href="https://github.com/Akshata-Gunapache/Profitable-App-Profiles-Recommendation" target="_blank" rel="noopener">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4M9 8l2 2 4-4"/></svg></div>
+          <h3>Profitable App Profiles</h3>
+          <p>Data analysis of App Store and Google Play datasets, cleaned and filtered to recommend the app profiles most likely to attract users.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Jupyter</span><span class="tag">Data analysis</span></div>
+          <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
         </a>
       </div>
+
+
       <div class="glass earlier reveal">
         <small>Earlier builds</small>
         <div class="list">
@@ -617,7 +673,7 @@ footer a:hover{color:var(--accent)}
       </div>
       <div class="timeline" id="timeline"><span class="rail" aria-hidden="true"></span>
         <article class="glass job now reveal">
-          <div class="when">2026 — Present<br><span>Current role</span></div>
+          <div class="when">Aug 2026 — Present<br><span>Current role</span></div>
           <div>
             <h3>Full-Stack Engineer – GenAI</h3>
             <div class="org">Lyzr AI</div>
@@ -712,6 +768,8 @@ footer a:hover{color:var(--accent)}
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.650 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
     <a class="icon-btn magnetic" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener" aria-label="GitHub">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.490c.5.09.68-.22.68-.48v-1.7c-2.780.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.550-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    <a class="icon-btn magnetic" href="https://leetcode.com/u/Akshata_4444/" target="_blank" rel="noopener" aria-label="LeetCode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3 6.6 11.2a1.8 1.8 0 0 0 0 2.5l4.6 4.7a1.8 1.8 0 0 0 2.5 0l2.6-2.6"/><path d="M9.5 12.5h9"/><path d="M8.8 8.9l3-3"/></svg></a>
     <a class="icon-btn magnetic" href="https://dribbble.com/akshata_4444" target="_blank" rel="noopener" aria-label="Dribbble">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M8.6 3.2c3.3 4.3 5.6 9.5 6.9 17.3M2.6 10.7c6.4.2 12.3-1.3 16.3-4.9M5.4 18.8c3.8-5 9.4-6.6 16-4.6"/></svg></a>
     <a class="icon-btn magnetic" href="https://twitter.com/agunapache28" target="_blank" rel="noopener" aria-label="X (Twitter)">
