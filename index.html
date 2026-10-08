@@ -440,9 +440,27 @@ html.intro-on .intro3d{display:block}
 .i-face.front:before{content:"";position:absolute;inset:0;opacity:.22;
   background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
   background-size:26px 26px;mask-image:radial-gradient(circle at 50% 40%,#000,transparent 75%);-webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 75%)}
-.i-pop{position:absolute;left:0;right:0;bottom:0;top:-12%;transform:translateZ(36px);overflow:hidden;border-radius:0 0 22px 22px;
+.i-pop{position:absolute;left:0;right:0;bottom:0;top:-6%;transform:translateZ(40px);overflow:hidden;border-radius:0 0 22px 22px;
   backface-visibility:hidden;-webkit-backface-visibility:hidden;pointer-events:none}
-.i-pop img{position:absolute;bottom:0;left:50%;height:100%;width:auto;transform:translateX(-50%);filter:drop-shadow(0 20px 26px rgba(10,5,40,.55))}
+.i-pop img{position:absolute;bottom:-2%;left:50%;width:min(96%,256px);height:auto;transform:translateX(-50%);
+  filter:drop-shadow(0 22px 26px rgba(10,5,40,.55));animation:girlBob 4s ease-in-out infinite}
+@keyframes girlBob{50%{translate:0 -8px}}
+.i-code{position:absolute;top:7%;left:9%;right:9%;padding:10px 12px;border-radius:12px;background:rgba(12,8,40,.55);border:1px solid rgba(255,255,255,.18);
+  font:500 calc(var(--cw) * .043)/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;color:#e9e5ff;text-align:left;box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.i-code .dots{display:flex;gap:5px;margin-bottom:7px}
+.i-code .dots i{width:7px;height:7px;border-radius:50%;background:#ff5f57}
+.i-code .dots i:nth-child(2){background:#febc2e}.i-code .dots i:nth-child(3){background:#28c840}
+.i-code b{color:#c4b5fd;font-weight:600}
+.i-code s{text-decoration:none;color:#a5f3fc}
+.i-code .caret{display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-2px;background:#c4b5fd;animation:blinkC 1s steps(1) infinite}
+@keyframes blinkC{50%{opacity:0}}
+.i-float{position:absolute;padding:8px 13px;border-radius:14px;font:600 14px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:#fff;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);box-shadow:0 14px 30px -10px rgba(0,0,0,.5);
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;pointer-events:none;animation:floatBadge 5s ease-in-out infinite}
+.i-float.f1{top:9%;left:-14%;transform:translateZ(80px);color:#c4b5fd}
+.i-float.f2{top:24%;right:-16%;transform:translateZ(110px);background:linear-gradient(135deg,#5b4cf0,#c084fc);border-color:transparent;animation-delay:-1.5s}
+.i-float.f3{top:52%;left:-18%;transform:translateZ(60px);color:#a5f3fc;animation-delay:-3s}
+@keyframes floatBadge{50%{translate:0 -10px}}
 .i-face.front:after{content:"";position:absolute;inset:0;mix-blend-mode:overlay;
   background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 45%,rgba(160,140,255,.4) 52%,transparent 65%);
   background-size:250% 100%;animation:sheen 4.5s ease-in-out 1.6s infinite}
@@ -575,8 +593,16 @@ html.intro-on .intro3d{display:block}
       <div class="i-card">
         <div class="i-edge"></div><div class="i-edge"></div><div class="i-edge"></div><div class="i-edge"></div>
         <div class="i-face back"><div><b>AG.</b><small>Full-Stack · GenAI</small></div></div>
-        <div class="i-face front" aria-hidden="true"></div>
-        <div class="i-pop"><img src="assets/img/intro-cutout.png" alt="Akshata Gunapache waving"></div>
+        <div class="i-face front" aria-hidden="true">
+          <div class="i-code"><div class="dots"><i></i><i></i><i></i></div>
+            <code><b>const</b> akshata = {<br>&nbsp;&nbsp;role: <s>"full-stack"</s>,<br>&nbsp;&nbsp;loves: [<s>"AI"</s>, <s>"UI"</s>]<br>}<span class="caret"></span></code>
+          </div>
+        </div>
+        <!-- 3D "woman technologist" from Microsoft Fluent Emoji (MIT License, Copyright (c) Microsoft Corporation) -->
+        <div class="i-pop"><img src="assets/img/tech-girl-3d.png" alt="3D illustration of a girl coding on a laptop"></div>
+        <div class="i-float f1" aria-hidden="true">&lt;/&gt;</div>
+        <div class="i-float f2" aria-hidden="true">✦ AI</div>
+        <div class="i-float f3" aria-hidden="true">{ API }</div>
       </div>
     </div>
   </div>
