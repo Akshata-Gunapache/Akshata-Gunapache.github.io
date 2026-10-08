@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Akshata Gunapache — Developer & Designer</title>
-<meta name="description" content="Akshata Gunapache — Computer Science engineer, web developer and UI/UX designer based in Bangalore.">
+<title>Akshata Gunapache — Full-Stack Software Engineer</title>
+<meta name="description" content="Akshata Gunapache — full-stack software engineer in Bengaluru building secure APIs, event-driven systems and GenAI-powered applications.">
 <link rel="icon" href="assets/img/favicon.ico">
 <style>
 :root{
@@ -205,6 +205,80 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:96px;color:var
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 footer a:hover{color:var(--accent)}
 
+
+/* skills extras */
+.skills .card .tags{margin-top:14px}
+.practices{margin:22px 0 0;color:var(--muted);font-size:15px}
+.practices b{color:var(--text)}
+.t-item .tags{margin-top:14px}
+
+/* project visuals (no screenshots for private/enterprise work) */
+.viz{position:relative;display:flex;gap:10px;padding:22px;min-height:230px;
+  background:radial-gradient(circle at 85% 15%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 55%),
+             radial-gradient(circle at 10% 90%,color-mix(in srgb,var(--accent2) 16%,transparent),transparent 55%),var(--surface2)}
+.viz-kanban .col{flex:1;display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:12px;background:color-mix(in srgb,var(--surface) 75%,transparent);border:1px solid var(--line)}
+.viz-kanban .col b{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.viz-kanban i{display:block;height:34px;border-radius:8px;background:var(--surface);border:1px solid var(--line);animation:cardIn .6s both}
+.viz-kanban i.s{height:22px}
+.viz-kanban i.hot{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent);animation:nudge 3s ease-in-out infinite}
+.ai-chip{position:absolute;left:22px;right:22px;bottom:18px;width:max-content;max-width:calc(100% - 44px);font-size:12px;font-weight:700;padding:7px 12px;border-radius:999px;
+  background:var(--text);color:var(--bg);box-shadow:0 10px 30px -10px var(--accent)}
+.viz-dash{flex-direction:column;justify-content:space-between}
+.viz-dash .kpis{display:flex;gap:10px}
+.viz-dash .kpis span{flex:1;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--surface) 80%,transparent);border:1px solid var(--line);font-weight:800;font-size:18px;letter-spacing:-.03em}
+.viz-dash small{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.viz-dash svg{width:100%;height:70px}
+.viz-dash polyline{fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:600;stroke-dashoffset:600;animation:draw 2.4s ease forwards}
+.viz-dash .health{display:flex;gap:6px;align-items:center;font-size:12px;font-weight:700;color:var(--muted);flex-wrap:wrap}
+.viz-dash .health i{width:8px;height:8px;border-radius:50%;margin-left:6px}
+.viz-dash .health i.ok{background:#22c55e;box-shadow:0 0 8px #22c55e}
+.viz-dash .health i.warn{background:#f59e0b;box-shadow:0 0 8px #f59e0b;animation:blink 1.4s infinite}
+.viz-nlp{flex-direction:column;justify-content:center}
+.rv-line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:9px 12px;border-radius:10px;background:color-mix(in srgb,var(--surface) 80%,transparent);border:1px solid var(--line);font-size:12.5px}
+.rv-line span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.rv-line em{font-style:normal;font-weight:800;font-variant-numeric:tabular-nums}
+.rv-line .pos{color:#16a34a}.rv-line .neu{color:var(--muted)}.rv-line .neg{color:var(--accent2)}
+.viz-nlp .bars{display:flex;gap:6px;align-items:flex-end;height:36px;margin-top:4px}
+.viz-nlp .bars i{flex:1;height:var(--h);border-radius:4px 4px 0 0;background:linear-gradient(var(--accent),var(--accent2))}
+.project.big .viz{min-height:100%}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes nudge{50%{transform:translateX(6px)}}
+@keyframes cardIn{from{opacity:0;transform:translateY(6px)}}
+
+/* earlier builds */
+.earlier.hide{display:none}
+.earlier-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.earlier-list a{display:block;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);transition:transform .2s,border-color .2s}
+.earlier-list a:hover{transform:translateY(-3px);border-color:var(--accent)}
+.earlier-list img{aspect-ratio:16/9;width:100%;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.earlier-list span{display:block;font-weight:700;font-size:14px;padding:10px 12px 0}
+.earlier-list small{display:block;color:var(--muted);font-size:12px;padding:0 12px 12px}
+
+/* highlights + education */
+.highlights{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.highlights .hl-main{grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px;
+  background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--accent) 16%,var(--surface)))}
+.highlights .hl-main h3{font-size:clamp(24px,2.6vw,32px);line-height:1.1}
+.highlights .card:nth-child(4){grid-column:span 2}
+.edu-card .edu-top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
+.edu-card h3{font-size:26px}
+.cgpa{text-align:right;flex:none}
+.cgpa strong{display:block;font-size:56px;line-height:.9;letter-spacing:-.06em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cgpa small{color:var(--muted);font-weight:700}
+@media (max-width:900px){
+  .highlights{grid-template-columns:1fr 1fr}
+  .highlights .hl-main{grid-column:span 2;grid-row:auto;min-height:220px}
+  .earlier-list{grid-template-columns:1fr 1fr}
+  .skills{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .skills,.highlights{grid-template-columns:1fr}
+  .highlights .hl-main,.highlights .card:nth-child(4){grid-column:auto}
+  .edu-card .edu-top{flex-direction:column}
+  .cgpa{text-align:left}
+  .viz-kanban .col:nth-child(3){display:none}
+}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .reveal.is-visible{opacity:1;transform:none}
@@ -219,7 +293,6 @@ footer a:hover{color:var(--accent)}
   .hero-side{grid-template-columns:140px 1fr;align-items:center}
   .about{grid-template-columns:1fr}
   .about-img{max-width:380px;aspect-ratio:1/1}
-  .skills{grid-template-columns:1fr}
   .project.big{grid-column:auto;grid-template-columns:1fr}
   .project.big .shot{aspect-ratio:16/9;border-right:none;border-bottom:1px solid var(--line)}
   .projects,.awards{grid-template-columns:1fr}
@@ -275,10 +348,10 @@ footer a:hover{color:var(--accent)}
   <section class="wrap hero">
     <div class="blob a"></div><div class="blob b"></div>
     <div>
-      <div class="eyebrow">Bangalore, India · Open to opportunities</div>
-      <h1>Hi, I'm <em>Akshata</em>.<br>I build &amp; design for the web.</h1>
+      <div class="eyebrow">Bengaluru, India · Full-stack + GenAI</div>
+      <h1>Hi, I'm <em>Akshata</em>.<br>I build software that scales.</h1>
       <p class="typed" aria-live="polite"><span id="typed"></span><span class="caret"></span></p>
-      <p class="lead">Computer Science engineer from PES University who loves turning ideas into clean, thoughtful products — from interface design in Figma to code that ships.</p>
+      <p class="lead">Full-stack software engineer with 1.5+ years at IBM building secure APIs, event-driven backends and GenAI-powered workflow automation, from the database to the UI.</p>
       <div class="actions">
         <a class="btn primary" href="#work">View my work
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -290,18 +363,18 @@ footer a:hover{color:var(--accent)}
     <aside class="hero-side">
       <div class="portrait"><img src="assets/img/Akshata.jpeg" alt="Portrait of Akshata Gunapache"></div>
       <div class="stats">
-        <div><strong data-count="50" data-prefix="Top ">Top 50</strong><small>GSSoC '22 contributor</small></div>
-        <div><strong data-count="5">5</strong><small>Projects shipped</small></div>
-        <div><strong data-count="3">3</strong><small>Leadership roles</small></div>
-        <div><strong>CSE</strong><small>B.Tech, PES University</small></div>
+        <div><strong data-count="1.5" data-suffix="+">1.5+</strong><small>Years at IBM</small></div>
+        <div><strong data-count="45" data-suffix="%">45%</strong><small>Prod stability gain</small></div>
+        <div><strong>IEEE</strong><small>Xplore publication</small></div>
+        <div><strong data-count="50" data-prefix="Top ">Top 50</strong><small>GSSoC '22, global</small></div>
       </div>
     </aside>
   </section>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>web development <i></i> UI/UX design <i></i> open source <i></i> python <i></i> javascript <i></i> competitive programming <i></i> mentoring <i></i></span>
-      <span>web development <i></i> UI/UX design <i></i> open source <i></i> python <i></i> javascript <i></i> competitive programming <i></i> mentoring <i></i></span>
+      <span>Java · Spring Boot <i></i> Python · FastAPI <i></i> Kafka · IBM MQ <i></i> LLMs · RAG <i></i> React · Angular · Next.js <i></i> AWS · GCP <i></i> Docker · Kubernetes <i></i></span>
+      <span>Java · Spring Boot <i></i> Python · FastAPI <i></i> Kafka · IBM MQ <i></i> LLMs · RAG <i></i> React · Angular · Next.js <i></i> AWS · GCP <i></i> Docker · Kubernetes <i></i></span>
     </div>
   </div>
 
@@ -311,14 +384,14 @@ footer a:hover{color:var(--accent)}
       <div class="about-img reveal"><img src="assets/img/Akshata2.jpg" alt="Akshata smiling" loading="lazy"></div>
       <div class="about-text reveal">
         <div class="kicker">01 — About me</div>
-        <h2 style="margin-bottom:26px">Curious by nature,<br>builder by habit.</h2>
-        <p class="quote">An industrious individual with a zeal for innovation, coding, designing and experimenting across technology.</p>
-        <p>I'm <strong>Akshata Gunapache</strong>, a <strong>B.Tech Computer Science &amp; Engineering</strong> graduate of <strong>PES University, Bangalore</strong>.</p>
-        <p>I'm an enthusiastic self-learner and a social person who loves taking on challenges and picking up new skills. I enjoy meeting people, exchanging ideas, and spreading knowledge and positivity.</p>
+        <h2 style="margin-bottom:26px">Backend depth,<br>front-end taste.</h2>
+        <p class="quote">I like building systems that are secure, fast and quietly reliable, and then giving them an interface people enjoy.</p>
+        <p>I'm <strong>Akshata Gunapache</strong>, a <strong>full-stack software engineer</strong> who spent 1.5+ years at <strong>IBM</strong> working on enterprise applications in Java, Python, REST APIs, SQL, cloud and DevOps.</p>
+        <p>My recent work spans event-driven services on Kafka and IBM MQ, automation frameworks, and <strong>GenAI-powered workflows</strong> that bring LLM reasoning into real business processes. I graduated in CSE from <strong>PES University</strong>, specialising in Machine Intelligence &amp; Data Science.</p>
         <div class="facts">
-          <div class="fact"><small>Based in</small><b>Bangalore, IN</b></div>
-          <div class="fact"><small>Focus</small><b>Web + UI/UX</b></div>
-          <div class="fact"><small>Also</small><b>Competitive coding</b></div>
+          <div class="fact"><small>Based in</small><b>Bengaluru, IN</b></div>
+          <div class="fact"><small>Focus</small><b>Backend + GenAI</b></div>
+          <div class="fact"><small>Research</small><b>IEEE Xplore</b></div>
         </div>
       </div>
     </div>
@@ -329,40 +402,41 @@ footer a:hover{color:var(--accent)}
     <div class="wrap">
       <div class="section-head reveal">
         <div><div class="kicker">02 — Skillset</div><h2>Tools of the trade</h2></div>
-        <p>A mix of engineering and design — I'm happiest where the two meet.</p>
+        <p>Across the stack: APIs and event streams, cloud and CI/CD, LLM apps, and the UI on top.</p>
       </div>
       <div class="skills">
         <div class="card reveal">
-          <div class="num">LANGUAGES</div>
+          <div class="num">01 · LANGUAGES</div>
           <h3>Code</h3>
-          <p>Languages I write in regularly.</p>
-          <div class="skill-list">
-            <div><div class="skill-row"><span>Python</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
-            <div><div class="skill-row"><span>JavaScript</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
-            <div><div class="skill-row"><span>C</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
-          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Go</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">C++</span></div>
         </div>
         <div class="card reveal">
-          <div class="num">WEB &amp; DESIGN</div>
-          <h3>Craft</h3>
-          <p>Building interfaces people enjoy using.</p>
-          <div class="skill-list">
-            <div><div class="skill-row"><span>HTML5</span><span>95%</span></div><div class="bar"><i style="--w:95%"></i></div></div>
-            <div><div class="skill-row"><span>CSS3</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
-            <div><div class="skill-row"><span>UI/UX · Figma</span><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
-          </div>
+          <div class="num">02 · BACKEND</div>
+          <h3>Services &amp; APIs</h3>
+          <div class="tags"><span class="tag">Spring Boot</span><span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">REST APIs</span><span class="tag">JWT</span><span class="tag">WebSockets</span><span class="tag">Kafka</span><span class="tag">IBM MQ</span></div>
         </div>
         <div class="card reveal">
-          <div class="num">TOOLKIT</div>
-          <h3>Everyday tools</h3>
-          <p>Software I reach for daily.</p>
-          <div class="tags">
-            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
-            <span class="tag">PyCharm</span><span class="tag">Figma</span><span class="tag">MATLAB</span>
-            <span class="tag">Pygame</span><span class="tag">Tkinter</span>
-          </div>
+          <div class="num">03 · AI / GENAI</div>
+          <h3>Intelligence</h3>
+          <div class="tags"><span class="tag">LLM applications</span><span class="tag">RAG</span><span class="tag">NLP</span><span class="tag">Hugging Face</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">Pandas</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="num">04 · FRONTEND</div>
+          <h3>Interfaces</h3>
+          <div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Angular</span><span class="tag">Tailwind</span><span class="tag">HTML5</span><span class="tag">CSS3 / SCSS</span><span class="tag">Figma</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="num">05 · DATA</div>
+          <h3>Databases</h3>
+          <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Firestore</span><span class="tag">Cloud SQL</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="num">06 · CLOUD &amp; DEVOPS</div>
+          <h3>Ship it</h3>
+          <div class="tags"><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Firebase</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">CI/CD</span></div>
         </div>
       </div>
+      <p class="practices reveal"><b>Practices:</b> Microservices · API design · Distributed systems · Agile / Scrum · Testing &amp; automation</p>
     </div>
   </section>
 
@@ -370,38 +444,52 @@ footer a:hover{color:var(--accent)}
   <section class="section" id="experience">
     <div class="wrap">
       <div class="section-head reveal">
-        <div><div class="kicker">03 — Experience</div><h2>Where I've contributed</h2></div>
-        <p>Open source, mentoring and leadership — roles that taught me to build with and for people.</p>
+        <div><div class="kicker">03 — Experience</div><h2>Where I've built</h2></div>
+        <p>Enterprise backends, AI-driven automation and client-facing web work.</p>
       </div>
       <div class="timeline">
         <article class="t-item reveal">
-          <div class="t-date">Aug 2022 — Present<br><span>Mentoring</span></div>
+          <div class="t-date">Jul 2025 — Jul 2026<br><span>Full-time</span></div>
           <div>
-            <h3>Campus Mentor</h3>
-            <div class="org">Mentro Tech</div>
-            <ul><li>Mentor students as they learn new skills, offering insight and support while they shape their own career paths.</li></ul>
+            <h3>Software Developer</h3>
+            <div class="org">IBM India Pvt Ltd</div>
+            <ul>
+              <li>Designed secure <b>REST APIs in Java / Spring Boot</b> with JWT auth and RBAC, improving production stability by <b>45%</b> while working with the backend, QA and DevOps teams.</li>
+              <li>Built <b>event-driven services on Kafka and IBM MQ</b> with SQL-backed workflows, cutting async processing backlog by <b>35%</b> and MTTR by <b>40%</b>.</li>
+              <li>Delivered <b>GenAI-powered workflow automation</b>, integrating LLM-based reasoning into <b>3+ enterprise workflows</b>.</li>
+            </ul>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">IBM MQ</span><span class="tag">SQL</span><span class="tag">LLMs</span></div>
           </div>
         </article>
         <article class="t-item reveal">
-          <div class="t-date">Mar — May 2022<br><span>Open source</span></div>
+          <div class="t-date">Jan — Jun 2025<br><span>Internship</span></div>
           <div>
-            <h3>Open Source Contributor</h3>
-            <div class="org">GirlScript Summer of Code 2022</div>
+            <h3>Software Developer Intern</h3>
+            <div class="org">IBM India Pvt Ltd</div>
             <ul>
-              <li>Contributed to numerous <b>real-world projects</b> over three months with guidance from experienced mentors.</li>
-              <li>Ranked among the <b>Top 50 contributors</b>.</li>
+              <li>Built <b>Python automation frameworks</b> for enterprise testing (API validation, log analysis, workflow tests), cutting regression effort by <b>30%</b>.</li>
+              <li>Sped up onboarding for 3+ engineers by <b>40%</b> with system-level docs, and contributed to 5 production code reviews under security-first SDLC standards.</li>
             </ul>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Test automation</span><span class="tag">APIs</span></div>
           </div>
         </article>
         <article class="t-item reveal">
-          <div class="t-date">Jan — Feb 2022<br><span>Leadership</span></div>
+          <div class="t-date">Jan — Apr 2024<br><span>Internship</span></div>
           <div>
-            <h3>Official Campus Ambassador</h3>
-            <div class="org">International Model United Nations Association (IMUNA)</div>
+            <h3>Web Developer Intern</h3>
+            <div class="org">Athvie Global</div>
             <ul>
-              <li>Developed proposals and supported marketing and business development for the next <b>IMUN Conference</b>.</li>
-              <li>Promoted IMUN among peers and helped them build skills through Model UN trainings.</li>
+              <li>Delivered a fully responsive client website end-to-end in 3 months, and cut design revision rounds by <b>50%</b> by leading Figma prototyping before any code was written.</li>
             </ul>
+            <div class="tags"><span class="tag">Figma</span><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive</span></div>
+          </div>
+        </article>
+        <article class="t-item reveal">
+          <div class="t-date">Community<br><span>Leadership</span></div>
+          <div>
+            <h3>Google Developer Student Club</h3>
+            <div class="org">PESU-ECC</div>
+            <ul><li>Ran Web Development and UI/UX workshops, and mentored junior engineers on front-end engineering and project delivery.</li></ul>
           </div>
         </article>
       </div>
@@ -415,95 +503,109 @@ footer a:hover{color:var(--accent)}
         <div><div class="kicker">04 — Selected work</div><h2>Things I've built</h2></div>
         <div class="filters" role="group" aria-label="Filter projects">
           <button class="filter on" data-f="all">All</button>
-          <button class="filter" data-f="web">Web</button>
-          <button class="filter" data-f="college">College</button>
+          <button class="filter" data-f="fullstack">Full-stack</button>
+          <button class="filter" data-f="ai">AI / ML</button>
         </div>
       </div>
       <div class="projects">
-        <a class="card project big reveal" data-cat="web" href="https://github.com/Akshata-Gunapache/Pepsi-Landing-Page" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/img/pepsi.png" alt="Pepsi landing page screenshot" loading="lazy"></div>
+        <a class="card project big reveal" data-cat="fullstack ai" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener">
+          <div class="shot viz viz-kanban" aria-hidden="true">
+            <div class="col"><b>To do</b><i></i><i class="s"></i><i></i></div>
+            <div class="col"><b>In progress</b><i class="hot"></i><i></i></div>
+            <div class="col"><b>Done</b><i></i><i class="s"></i><i></i><i class="s"></i></div>
+            <span class="ai-chip">✦ AI suggests: move "API auth" → In progress</span>
+          </div>
           <div class="body">
-            <div class="meta"><span class="num">FEATURED · 2022</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-            <h3>Pepsi Landing Page</h3>
-            <p>A sleek, well-designed and fully responsive landing page reimagining the Pepsi website.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive</span></div>
+            <div class="meta"><span class="num">FEATURED · FULL-STACK + AI</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            <h3>Jira++ · AI-Powered Workflow Platform</h3>
+            <p>A multi-user, real-time kanban with WebSocket (STOMP) live sync, JWT auth, RBAC and Spring Security, plus AI task recommendations from Python services. Automated GCP CI/CD made deployments <b>60% faster</b>.</p>
+            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">WebSockets</span><span class="tag">MySQL</span><span class="tag">GCP</span><span class="tag">JWT</span><span class="tag">Python</span></div>
           </div>
         </a>
-        <a class="card project reveal" data-cat="college" href="https://github.com/Akshata-Gunapache/Snake-Arcade-Game" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/img/snakegame.png" alt="Snake arcade game screenshot" loading="lazy"></div>
+        <a class="card project reveal" data-cat="fullstack" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener">
+          <div class="shot viz viz-dash" aria-hidden="true">
+            <div class="kpis"><span><small>uptime</small>99.9%</span><span><small>p95</small>182ms</span><span><small>pods</small>24</span></div>
+            <svg viewBox="0 0 300 80" preserveAspectRatio="none"><polyline points="0,60 30,52 60,58 90,40 120,44 150,28 180,34 210,20 240,26 270,14 300,18"/></svg>
+            <div class="health"><i class="ok"></i>api <i class="ok"></i>db <i class="warn"></i>queue <i class="ok"></i>auth</div>
+          </div>
           <div class="body">
-            <div class="meta"><span class="num">COLLEGE · 2022</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-            <h3>Snake Arcade Game</h3>
-            <p>The classic Snake game, built with Pygame and Tkinter as a first-semester project.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Pygame</span><span class="tag">Tkinter</span></div>
+            <div class="meta"><span class="num">FULL-STACK · CLOUD</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            <h3>CloudOps Monitoring Dashboard</h3>
+            <p>A cloud-native infrastructure dashboard with real-time telemetry and service-health metrics, built on a React/TypeScript front end and a FastAPI back end in Docker.</p>
+            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
           </div>
         </a>
-        <a class="card project reveal" data-cat="college" href="https://github.com/Akshata-Gunapache/Food-Ordering-System" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/img/food.jpg" alt="Food ordering system cover" loading="lazy"></div>
+        <a class="card project reveal" data-cat="ai" href="https://github.com/Akshata-Gunapache" target="_blank" rel="noopener">
+          <div class="shot viz viz-nlp" aria-hidden="true">
+            <div class="rv-line"><span>"Delivery was super quick, love it"</span><em class="pos">+0.92</em></div>
+            <div class="rv-line"><span>"Packaging okay, product average"</span><em class="neu">0.04</em></div>
+            <div class="rv-line"><span>"Support never replied to me"</span><em class="neg">−0.81</em></div>
+            <div class="bars"><i style="--h:72%"></i><i style="--h:18%"></i><i style="--h:10%"></i></div>
+          </div>
           <div class="body">
-            <div class="meta"><span class="num">COLLEGE · 2022</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-            <h3>Food Ordering System</h3>
-            <p>A console ordering system written in C as a second-semester mini project.</p>
-            <div class="tags"><span class="tag">C</span><span class="tag">Data structures</span></div>
+            <div class="meta"><span class="num">AI / NLP</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            <h3>LLM-Powered Review Intelligence</h3>
+            <p>A sentiment pipeline that analyses <b>10,000+ customer reviews</b> with VADER and RoBERTa, with transformer-based insights and automated preprocessing and visualisation.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">RoBERTa</span><span class="tag">Hugging Face</span><span class="tag">PyTorch</span></div>
           </div>
         </a>
-        <a class="card project reveal" data-cat="web" href="https://github.com/Akshata-Gunapache/Starbucks-Landing-Page" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/img/starbucks.png" alt="Starbucks landing page screenshot" loading="lazy"></div>
-          <div class="body">
-            <div class="meta"><span class="num">WEB · 2022</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-            <h3>Starbucks Landing Page</h3>
-            <p>A clean landing page for Starbucks with interactive product switching.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          </div>
-        </a>
-        <a class="card project reveal" data-cat="web" href="https://github.com/Akshata-Gunapache/CocaCola-Landing-Page" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/img/cocacola.png" alt="Coca-Cola landing page screenshot" loading="lazy"></div>
-          <div class="body">
-            <div class="meta"><span class="num">WEB · 2022</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-            <h3>Coca-Cola Landing Page</h3>
-            <p>A bold, brand-led landing page for Coca-Cola built from scratch.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          </div>
-        </a>
+      </div>
+
+      <div class="earlier reveal">
+        <div class="kicker" style="margin:56px 0 16px">Earlier builds</div>
+        <div class="earlier-list">
+          <a href="https://github.com/Akshata-Gunapache/Pepsi-Landing-Page" target="_blank" rel="noopener" data-cat="web"><img src="assets/img/pepsi.png" alt="" loading="lazy"><span>Pepsi Landing Page</span><small>HTML · CSS · JS</small></a>
+          <a href="https://github.com/Akshata-Gunapache/Starbucks-Landing-Page" target="_blank" rel="noopener" data-cat="web"><img src="assets/img/starbucks.png" alt="" loading="lazy"><span>Starbucks Landing Page</span><small>HTML · CSS · JS</small></a>
+          <a href="https://github.com/Akshata-Gunapache/CocaCola-Landing-Page" target="_blank" rel="noopener" data-cat="web"><img src="assets/img/cocacola.png" alt="" loading="lazy"><span>Coca-Cola Landing Page</span><small>HTML · CSS · JS</small></a>
+          <a href="https://github.com/Akshata-Gunapache/Snake-Arcade-Game" target="_blank" rel="noopener" data-cat="web"><img src="assets/img/snakegame.png" alt="" loading="lazy"><span>Snake Arcade Game</span><small>Python · Pygame</small></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- AWARDS + EDUCATION -->
+  <!-- RESEARCH & AWARDS + EDUCATION -->
   <section class="section" id="awards">
     <div class="wrap">
       <div class="section-head reveal">
-        <div><div class="kicker">05 — Recognition</div><h2>Honours &amp; awards</h2></div>
-        <p>Moments I'm proud of, inside and outside tech.</p>
+        <div><div class="kicker">05 — Research &amp; recognition</div><h2>Highlights</h2></div>
+        <p>Research, competitions and open source.</p>
       </div>
-      <div class="awards">
-        <div class="card award reveal">
-          <div class="shot"><img src="assets/img/GSSoC_Certificate.png" alt="GirlScript Summer of Code certificate" loading="lazy"></div>
-          <div class="body">
-            <div class="num">JULY 2022</div>
-            <h3>GirlScript Summer of Code</h3>
-            <p>Certificate of Appreciation and Letter of Recognition for placing among the Top 50 open source contributors.</p>
-          </div>
+      <div class="highlights">
+        <div class="card hl-main reveal">
+          <div class="num">IEEE XPLORE · PUBLICATION</div>
+          <h3>Real-Time Thought-Driven Scene Creation (fMRI approach)</h3>
+          <p>Published research on generating scenes from brain activity in real time, which meant thinking about large-scale systems end to end.</p>
         </div>
-        <div class="card award reveal">
-          <div class="shot"><img src="assets/img/NCC.jpg" alt="NCC A certificate" loading="lazy"></div>
-          <div class="body">
-            <div class="num">MAY 2019</div>
-            <h3>NCC (IAF) 'A' Certificate</h3>
-            <p>Issued by the Ministry of Defence, India, for attending the Combined Annual Training Camp (IAF) 2019 in New Delhi as a cadet.</p>
-          </div>
+        <div class="card reveal">
+          <div class="num">IEEE-RAS · IDEATHON</div>
+          <h3>Top 5 of 90 teams</h3>
+          <p>HealthSpark Ideathon, a national-level health-tech innovation challenge.</p>
+        </div>
+        <div class="card reveal">
+          <div class="num">OPEN SOURCE · 2022</div>
+          <h3>GSSoC Top 50 globally</h3>
+          <p>Ranked in the top 50 of thousands of contributors across 10+ projects.</p>
+        </div>
+        <div class="card reveal">
+          <div class="num">GATE 2024 · DA</div>
+          <h3>Score: 358</h3>
+          <p>Data Science &amp; Artificial Intelligence paper.</p>
         </div>
       </div>
 
       <div class="section-head reveal" style="margin-top:80px">
-        <div><div class="kicker">06 — Education</div><h2>The journey so far</h2></div>
-        <p>From Singapore to New Delhi to Bangalore.</p>
+        <div><div class="kicker">06 — Education</div><h2>Foundations</h2></div>
       </div>
-      <div class="edu">
-        <div class="card first reveal"><div class="num">2021 — 2025</div><h3>B.Tech, Computer Science</h3><p>PES University, Bangalore</p></div>
-        <div class="card reveal"><div class="num">2019 — 2021</div><h3>Grades 11–12</h3><p>Narayana E-Techno School, Bangalore</p></div>
-        <div class="card reveal"><div class="num">2014 — 2019</div><h3>Grades 6–10</h3><p>Basava International School, New Delhi</p></div>
-        <div class="card reveal"><div class="num">2009 — 2014</div><h3>Grades 1–5</h3><p>Shishya BEML Public School, Bangalore</p></div>
+      <div class="card edu-card reveal">
+        <div class="edu-top">
+          <div>
+            <div class="num">2021 — 2025</div>
+            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+            <p>PES University, Bengaluru · Specialisation in Machine Intelligence &amp; Data Science</p>
+          </div>
+          <div class="cgpa"><strong>8.5</strong><small>/ 10 CGPA</small></div>
+        </div>
+        <div class="tags"><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Operating Systems</span><span class="tag">DBMS</span><span class="tag">Computer Networks</span><span class="tag">Software Engineering</span><span class="tag">Cloud Computing</span><span class="tag">OOP</span></div>
       </div>
     </div>
   </section>
@@ -514,7 +616,7 @@ footer a:hover{color:var(--accent)}
       <div class="contact reveal">
         <div class="kicker">07 — Get in touch</div>
         <h2>Let's build something<br>together.</h2>
-        <p>I'm always open to new projects, creative ideas and opportunities to be part of your vision. My inbox is always open.</p>
+        <p>Backend systems, AI-driven products, or an interface that needs some love: my inbox is always open.</p>
         <div class="contact-links">
           <a class="btn primary" href="mailto:agunapache28@gmail.com">agunapache28@gmail.com</a>
           <button class="btn" id="copy" type="button">Copy email</button>
@@ -536,6 +638,7 @@ footer a:hover{color:var(--accent)}
     </div>
   </section>
 </main>
+
 
 <footer>
   <div class="wrap">
@@ -566,7 +669,7 @@ footer a:hover{color:var(--accent)}
   links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
 
   // Typing roles
-  const roles = ['Computer Science Engineer', 'Web Developer', 'UI/UX Designer', 'Competitive Programmer', 'Always learning'];
+  const roles = ['Full-Stack Software Engineer', 'Backend Developer', 'GenAI Builder', 'Cloud & DevOps Enthusiast', 'UI/UX Designer'];
   const typed = document.getElementById('typed');
   if (reduced) { typed.innerHTML = '<b>' + roles.join(' · ') + '</b>'; }
   else {
@@ -606,11 +709,12 @@ footer a:hover{color:var(--accent)}
   // Count-up stats
   document.querySelectorAll('[data-count]').forEach(el => {
     if (reduced) return;
-    const end = +el.dataset.count, pre = el.dataset.prefix || '';
+    const end = +el.dataset.count, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    const dec = (el.dataset.count.split('.')[1] || '').length;
     const start = performance.now();
     (function step(t) {
       const p = Math.min((t - start) / 1400, 1);
-      el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3)));
+      el.textContent = pre + (end * (1 - Math.pow(1 - p, 3))).toFixed(dec) + suf;
       if (p < 1) requestAnimationFrame(step);
     })(start);
   });
@@ -631,7 +735,8 @@ footer a:hover{color:var(--accent)}
   document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
     document.querySelectorAll('.filter').forEach(b => b.classList.toggle('on', b === btn));
     const f = btn.dataset.f;
-    document.querySelectorAll('.project').forEach(p => p.classList.toggle('hide', f !== 'all' && p.dataset.cat !== f));
+    document.querySelectorAll('.project').forEach(p => p.classList.toggle('hide', f !== 'all' && !p.dataset.cat.split(' ').includes(f)));
+    document.querySelector('.earlier').classList.toggle('hide', f !== 'all');
   }));
 
   // Active nav link
